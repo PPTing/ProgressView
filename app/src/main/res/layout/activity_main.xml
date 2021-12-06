@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <me.ppting.view.progress.view.ProgressView
+        android:id="@+id/progressView"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="100dp"
+        android:text="Hello World!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLeftValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/progressView"
+        app:layout_constraintStart_toStartOf="@+id/progressView"
+        app:layout_constraintTop_toTopOf="@+id/progressView" />
+
+    <TextView
+        android:id="@+id/tvRightValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="0"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/progressView"
+        app:layout_constraintEnd_toEndOf="@+id/progressView"
+        app:layout_constraintTop_toTopOf="@+id/progressView" />
+
+    <Button
+        android:id="@+id/addLeft"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressView" />
+
+    <Button
+        android:id="@+id/minLeft"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addLeft" />
+
+    <Button
+        android:id="@+id/addRight"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressView" />
+
+    <Button
+        android:id="@+id/minRight"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addRight" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
